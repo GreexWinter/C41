@@ -1,5 +1,4 @@
 class Form {
-
   constructor() {
     this.input = createInput("Name");
     this.button = createButton('Play');
@@ -13,7 +12,6 @@ class Form {
     this.input.hide();
     this.title.hide();
   }
-
   display(){
     this.title.html("Car Racing Game");
     this.title.position(displayWidth/2 - 50, 0);
@@ -33,11 +31,10 @@ class Form {
       this.greeting.html("Hello " + player.name)
       this.greeting.position(displayWidth/2 - 70, displayHeight/4);
     });
-
     this.reset.mousePressed(()=>{
       player.updateCount(0);
       game.update(0);
+      Player.updateRank(0);
     });
-
   }
 }
